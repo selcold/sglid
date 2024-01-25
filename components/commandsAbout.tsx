@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { ReactElement, useState, useEffect } from 'react';
+
 import PropTypes from 'prop-types';
 import en_config from '../locales/en';
 import ja_config from '../locales/ja';
@@ -25,7 +26,7 @@ const CommandsAbout: React.FC<CommandsAboutProps> = ({ comp_lang, mode }) => {
     var flag = language === 'en' ? 'fi fi-us' : 'fi fi-jp';
 
 
-    const [commandsAboutBoxes, setCommandsAboutBoxes] = useState([]);
+    const [commandsAboutBoxes, setCommandsAboutBoxes] = useState<ReactElement[]>([]);
 
     const renderBadge = (badgeColor: string | undefined, badgeName: string | undefined) => {
         if (badgeName && badgeColor) {
