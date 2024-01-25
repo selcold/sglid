@@ -62,7 +62,7 @@ export default function Home() {
   //表示範囲にきたら表示
   FadeUpTrigger();
   return (
-    <body style={{'--tw-bg-opacity':`1`,backgroundColor:`rgb(39 41 52/var(--tw-bg-opacity))`,'--tw-text-opacity':`1`,color:`rgb(145 149 171/var(--tw-text-opacity))`}}>
+    <body style={{backgroundColor:`rgb(39 41 52)`,color:`rgb(145 149 171)`}}>
         <div className="fixed flex justify-center items-center w-full h-full" aria-label="loading">
           <div className="animate-spin h-10 w-10 border-4 border-blue-500 rounded-full border-t-transparent"></div>
         </div>
