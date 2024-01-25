@@ -26,6 +26,15 @@ const CommandsAbout: React.FC<CommandsAboutProps> = ({ comp_lang, mode }) => {
 
 
     const [commandsAboutBoxes, setCommandsAboutBoxes] = useState([]);
+
+    const renderBadge = (badgeColor: string | undefined, badgeName: string | undefined) => {
+        if (badgeName && badgeColor) {
+            return <Badge mode={badgeColor}>{badgeName}</Badge>;
+        } else {
+            return <div></div>;
+        }
+    };
+    
     useEffect(() => {
         if(mode===''){
             mode='all'
@@ -308,12 +317,7 @@ const CommandsAbout: React.FC<CommandsAboutProps> = ({ comp_lang, mode }) => {
                         };
                     };
                     if(mode==='more'){
-                        var bageData;
-                        if(commands_config[i].badgeName){
-                            bageData = <Badge mode={commands_config[i].badgeColor}>{commands_config[i].badgeName}</Badge>;
-                        }else{
-                            bageData = <div></div>;
-                        }
+                        const bageData = renderBadge(commands_config[i].badgeColor, commands_config[i].badgeName);
                         boxes.push(
                             <li key={i} className='box'>
                                 <div className="flex flex-col lg:flex-row pt-12 pb-12 border-b-[1px] border-slate-500 border-solid">
