@@ -8,10 +8,12 @@ import ja_commadns_config from '../locales/ja_commands';
 import en_commadns_config from '../locales/en_commands';
 import Badge from '@/components/badge-ui/ui/badge-ui';
 
-interface HeaderProps {
+interface CommandsAboutProps {
     comp_lang: string;
+    mode: string;
 }
-const CommandsAbout = ({ comp_lang, mode }) => {
+
+const CommandsAbout: React.FC<CommandsAboutProps> = ({ comp_lang, mode }) => {
 
     const [language, setLanguage] = useState(comp_lang);
 
