@@ -73,7 +73,7 @@ export default function Header({ comp_lang }: HeaderProps) {
     };
 
     return (
-        <div id='header' onLoad={header_scroll_block_check} className="relative w-full h-20 border-b border-solid flex items-center justify-center z-50 top-0 border-slate-700 bg-[#151621]" style={{'--tw-bg-opacity':`1!important`,backgroundColor:`rgb(21 22 33/var(--tw-bg-opacity))!important`}}>
+        <div id='header' onLoad={header_scroll_block_check} className="relative w-full h-20 border-b border-solid flex items-center justify-center z-50 top-0 border-slate-700 bg-[#151621]" style={{backgroundColor:`rgb(21 22 33)!important`}}>
             <div className="mx-5 w-full max-w-screen-lg flex items-center justify-between">
                 <div className="flex items-center justify-start gap-x-10">
                     <a className="active" href={links.siteSglid_home} target="_self" aria-current="page">
