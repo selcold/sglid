@@ -155,30 +155,30 @@ export default function Home() {
                 if(select_command){
                     var mo = new MutationObserver(function() {
                         let cards = document.querySelectorAll('.box');
-                        if(cards){
-                            let search_query = select_command.textContent;
+                        if (cards) {
+                            let search_query = select_command.textContent || "";  // Nullish Coalescing 演算子を使用して、textContent が null または undefined の場合は空文字列にする
                             for (var i = 0; i < cards.length; i++) {
                                 cards[i].classList.add("hidden");
-                            };
+                            }
                             setTimeout(() => {
-                                if(search_query!==null){
-                                    if(search_query===`all`||search_query===`コマンドを選択...`){
+                                if (search_query !== null) {
+                                    if (search_query === "all" || search_query === "コマンドを選択...") {
                                         for (var i = 0; i < cards.length; i++) {
                                             cards[i].classList.remove("hidden");
-                                        };
-                                    }else{
+                                        }
+                                    } else {
                                         for (var i = 0; i < cards.length; i++) {
-                                            if(cards[i].textContent.toLowerCase()
-                                                .includes(search_query.toLowerCase())) {
+                                            const cardText = cards[i].textContent || "";  // Nullish Coalescing 演算子を使用して、textContent が null または undefined の場合は空文字列にする
+                                            if (cardText.toLowerCase().includes(search_query.toLowerCase())) {
                                                 cards[i].classList.remove("hidden");
                                             } else {
                                                 cards[i].classList.add("hidden");
-                                            };
-                                        };
-                                    };
+                                            }
+                                        }
+                                    }
                                 }
                             }, 0);
-                        };
+                        }
                     });
                     var config = {
                         characterData: true,
