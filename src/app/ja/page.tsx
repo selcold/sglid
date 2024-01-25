@@ -8,7 +8,7 @@ import { HeadCustom_config } from '@/lib/headCustom';
 import Header from '../../../components/header';
 import Footer from '../../../components/footer';
 import CommandsAbout from '../../../components/commandsAbout';
-import getLocationLanguage from '@/lib/langCheck';
+import GetLocationLanguage from '@/lib/langCheck';
 import links_en from '../../../locales/links_en';
 import links_ja from '../../../locales/links_ja';
 import en_config from '../../../locales/en';
@@ -45,7 +45,7 @@ export default function Home() {
     }
 }, [isLangLoaded]);
 
-  const location_language = getLocationLanguage();
+  const location_language = GetLocationLanguage();
   const locales = location_language === 'en' ? en_config : ja_config;
   const links = location_language === 'en' ? links_en : links_ja;
 

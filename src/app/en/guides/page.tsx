@@ -51,7 +51,7 @@ import en_config from '../../../../locales/en';
 import ja_config from '../../../../locales/ja';
 import links_en from '../../../../locales/links_en';
 import links_ja from '../../../../locales/links_ja';
-import getLocationLanguage from '@/lib/langCheck';
+import GetLocationLanguage from '@/lib/langCheck';
 import { DIscordMsgEmbed, DiscordMsg } from "@/components/discord-messages-ui-beta/ui/discord_massage_ui";
 import Badge from "@/components/badge-ui/ui/badge-ui";
 import en_commadns_config from "../../../../locales/en_commands";
@@ -191,7 +191,7 @@ export default function Home() {
         }
     }, [isLangLoaded]);
 
-    var location_language = getLocationLanguage();
+    var location_language = GetLocationLanguage();
     const locales = location_language === 'en' ? en_config : ja_config;
     const locales_commands = location_language === 'en' ? en_commadns_config : ja_commadns_config;
     const links = location_language === 'en' ? links_en : links_ja;

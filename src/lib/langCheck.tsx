@@ -1,7 +1,7 @@
 // langCheck.js
 import React, { useState, useEffect } from 'react';
 
-const getLocationLanguage = () => {
+const GetLocationLanguage = () => {
     const [language, setLanguage] = useState(() => {
         if (typeof window !== 'undefined') {
             const storedLanguage = localStorage.getItem('language');
@@ -44,4 +44,4 @@ const getLocationLanguage = () => {
     }
 };
 
-export default getLocationLanguage;
+export default GetLocationLanguage;

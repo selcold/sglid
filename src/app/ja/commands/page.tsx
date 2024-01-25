@@ -12,7 +12,6 @@ import { HeadCustom_config } from '@/lib/headCustom';
 // component
 import Header from '../../../../components/header';
 import Footer from '../../../../components/footer';
-import Badge from '../../../../components/badge';
 import CommandsAbout from '../../../../components/commandsAbout';
 // shadcn/ui
 import { Check, ChevronsUpDown } from "lucide-react";
@@ -35,7 +34,7 @@ import en_config from '../../../../locales/en';
 import ja_config from '../../../../locales/ja';
 import links_en from '../../../../locales/links_en';
 import links_ja from '../../../../locales/links_ja';
-import getLocationLanguage from '@/lib/langCheck';
+import GetLocationLanguage from '@/lib/langCheck';
 
 const commands = [
     {
@@ -171,7 +170,7 @@ export default function Home() {
         }
     }, [isLangLoaded]);
 
-    var location_language = getLocationLanguage();
+    var location_language = GetLocationLanguage();
     const locales = location_language === 'en' ? en_config : ja_config;
     const links = location_language === 'en' ? links_en : links_ja;
     // Headを編集
