@@ -433,7 +433,9 @@ export default function Home() {
                                             <div>
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - About</h1>
                                                 <div>
-                                                    <p>{locales_commands[locales_commands["0"].cmd_about].description}</p>
+                                                    {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "about") && (
+                                                        <p>{locales_commands.find(cmd => cmd.commandName === "about")!.description}</p>
+                                                    )}
                                                 </div>
                                             </div>
                                             <div>
@@ -493,7 +495,9 @@ export default function Home() {
                                             <div>
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Counter</h1>
                                                 <div>
-                                                    <p>{locales_commands[locales_commands["0"].cmd_counter].description}</p>
+                                                    {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "counter") && (
+                                                        <p>{locales_commands.find(cmd => cmd.commandName === "counter")!.description}</p>
+                                                    )}
                                                 </div>
                                             </div>
                                             <div>
@@ -523,7 +527,9 @@ export default function Home() {
                                             <div>
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Help</h1>
                                                 <div>
-                                                    <p>{locales_commands[locales_commands["0"].cmd_help].description}</p>
+                                                    {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "help") && (
+                                                        <p>{locales_commands.find(cmd => cmd.commandName === "help")!.description}</p>
+                                                    )}
                                                 </div>
                                             </div>
                                             <div>
@@ -581,7 +587,9 @@ export default function Home() {
                                             <div>
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Janken</h1>
                                                 <div>
-                                                    <p>{locales_commands[locales_commands["0"].cmd_janken].description}</p>
+                                                    {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "janken") && (
+                                                        <p>{locales_commands.find(cmd => cmd.commandName === "janken")!.description}</p>
+                                                    )}
                                                 </div>
                                             </div>
                                             <div>
@@ -608,7 +616,9 @@ export default function Home() {
                                             <div>
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Omikuji</h1>
                                                 <div>
-                                                    <p>{locales_commands[locales_commands["0"].cmd_omikuji].description}</p>
+                                                    {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "omikuji") && (
+                                                        <p>{locales_commands.find(cmd => cmd.commandName === "omikuji")!.description}</p>
+                                                    )}
                                                 </div>
                                             </div>
                                             <div>
@@ -637,7 +647,9 @@ export default function Home() {
                                             <div>
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Ping</h1>
                                                 <div>
-                                                    <p>{locales_commands[locales_commands["0"].cmd_ping].description}</p>
+                                                    {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "ping") && (
+                                                        <p>{locales_commands.find(cmd => cmd.commandName === "ping")!.description}</p>
+                                                    )}
                                                 </div>
                                             </div>
                                             <div>
@@ -666,8 +678,10 @@ export default function Home() {
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Play</h1>
                                                 <div>
                                                     <p>
-                                                    <Badge mode="dark">{locales.不安定}</Badge>
-                                                    {locales_commands[locales_commands["0"].cmd_play].description}
+                                                        <Badge mode="dark">{locales.不安定}</Badge>
+                                                        {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "play") && (
+                                                            <>{locales_commands.find(cmd => cmd.commandName === "play")!.description}</>
+                                                        )}
                                                     </p>
                                                 </div>
                                             </div>
@@ -717,9 +731,9 @@ export default function Home() {
                                             <div>
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Pro</h1>
                                                 <div>
-                                                    <p>
-                                                    {locales_commands[locales_commands["0"].cmd_pro].description}
-                                                    </p>
+                                                    {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "pro") && (
+                                                        <p>{locales_commands.find(cmd => cmd.commandName === "pro")!.description}</p>
+                                                    )}
                                                 </div>
                                             </div>
                                             <div>
@@ -801,8 +815,10 @@ export default function Home() {
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Qplay</h1>
                                                 <div>
                                                     <p>
-                                                    <Badge mode="dark">{locales.不安定}</Badge>
-                                                    {locales_commands[locales_commands["0"].cmd_qplay].description}
+                                                        <Badge mode="dark">{locales.不安定}</Badge>
+                                                        {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "qplay") && (
+                                                            <>{locales_commands.find(cmd => cmd.commandName === "qplay")!.description}</>
+                                                        )}
                                                     </p>
                                                 </div>
                                             </div>
@@ -831,8 +847,10 @@ export default function Home() {
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Queue</h1>
                                                 <div>
                                                     <p>
-                                                    <Badge mode="dark">{locales.不安定}</Badge>
-                                                    {locales_commands[locales_commands["0"].cmd_queue].description}
+                                                        <Badge mode="dark">{locales.不安定}</Badge>
+                                                        {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "queue") && (
+                                                            <>{locales_commands.find(cmd => cmd.commandName === "queue")!.description}</>
+                                                        )}
                                                     </p>
                                                 </div>
                                             </div>
@@ -861,9 +879,9 @@ export default function Home() {
                                             <div>
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Sc</h1>
                                                 <div>
-                                                    <p>
-                                                    {locales_commands[locales_commands["0"].cmd_sc].description}
-                                                    </p>
+                                                    {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "sc") && (
+                                                        <p>{locales_commands.find(cmd => cmd.commandName === "sc")!.description}</p>
+                                                    )}
                                                 </div>
                                             </div>
                                             <div>
@@ -1021,9 +1039,9 @@ export default function Home() {
                                             <div>
                                                 <h1 className="text-white font-bold text-[30px]">{locales.コマンド} - Server</h1>
                                                 <div>
-                                                    <p>
-                                                    {locales_commands[locales_commands["0"].cmd_server].description}
-                                                    </p>
+                                                    {locales_commands && locales_commands.length > 0 && locales_commands.find(cmd => cmd.commandName === "server") && (
+                                                        <p>{locales_commands.find(cmd => cmd.commandName === "server")!.description}</p>
+                                                    )}
                                                 </div>
                                             </div>
                                             <div>
