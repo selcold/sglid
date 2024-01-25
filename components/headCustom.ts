@@ -1,11 +1,16 @@
 import { useEffect } from 'react';
 
-export const HeadCustom_config = (req_config) => {
+interface HeadConfig {
+    title?: string;
+    // 他にも必要なプロパティがあれば追加
+}
+
+export const HeadCustom_config = (req_config: HeadConfig) => {
     useEffect(() => {
-        if(req_config.title){
-            if(document.title){
+        if (req_config.title) {
+            if (document.title) {
                 document.title = req_config.title;
-            };
-        };
-    }, []);
+            }
+        }
+    }, [req_config.title]);
 };
