@@ -3,12 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import MainLinks_config from '../../../public/assets/links/main_link_config';
-import { FadeUpTrigger } from '@/lib/fadeUpTrigger';
-import { HeadCustom_config } from '@/lib/headCustom';
+import { FadeUpTrigger } from '../../../components/fadeUpTrigger';
+import { HeadCustom_config } from '../../../components/headCustom';
 import Header from '../../../components/header';
 import Footer from '../../../components/footer';
 import CommandsAbout from '../../../components/commandsAbout';
-import GetLocationLanguage from '@/lib/langCheck';
+import GetLocationLanguage from '../../../components/langCheck';
 import links_en from '../../../locales/links_en';
 import links_ja from '../../../locales/links_ja';
 import en_config from '../../../locales/en';

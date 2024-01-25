@@ -8,7 +8,7 @@ import {  } from '@fortawesome/free-solid-svg-icons';
 //link list
 import MainLinks_config from '../../../../public/assets/links/main_link_config';
 // head custom
-import { HeadCustom_config } from '@/lib/headCustom';
+import { HeadCustom_config } from '../../../../components/headCustom';
 // component
 import Header from '../../../../components/header';
 import Footer from '../../../../components/footer';
@@ -34,7 +34,7 @@ import en_config from '../../../../locales/en';
 import ja_config from '../../../../locales/ja';
 import links_en from '../../../../locales/links_en';
 import links_ja from '../../../../locales/links_ja';
-import GetLocationLanguage from '@/lib/langCheck';
+import GetLocationLanguage from '../../../../components/langCheck';
 
 const commands = [
     {

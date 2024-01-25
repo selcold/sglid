@@ -15,7 +15,6 @@ import ja_config from '../locales/ja';
 import en_config from '../locales/en';
 import links_en from '../locales/links_en';
 import links_ja from '../locales/links_ja';
-import getLocationLanguage from '@/lib/langCheck';
 
 interface HeaderProps {
     comp_lang: string;

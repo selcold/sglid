@@ -7,14 +7,14 @@ import {  } from '@fortawesome/free-solid-svg-icons';
 //link list
 import MainLinks_config from '../../public/assets/links/main_link_config';
 // scroll show
-import { FadeUpTrigger } from '@/lib/fadeUpTrigger';
+import { FadeUpTrigger } from '../../components/fadeUpTrigger';
 // head custom
-import { HeadCustom_config } from '@/lib/headCustom';
+import { HeadCustom_config } from '../../components/headCustom';
 //component
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import CommandsAbout from '../../components/commandsAbout';
-import GetLocationLanguage from '@/lib/langCheck';
+import GetLocationLanguage from '../../components/langCheck';
 import links_en from '../../locales/links_en';
 import links_ja from '../../locales/links_ja';
 import en_config from '../../locales/en';
