@@ -164,8 +164,8 @@ export default function Home() {
                 </h2>
               </div>
               <div className='fadeUpTrigger flex flex-wrap items-center justify-center mt-3 lg:mt-6 gap-5'>
-                <iframe src="https://discord.com/widget?id=810030361189810229&amp;theme=dark" className='max-w-[350px]  h-[400px] lg:h-[500px]' allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                <iframe src="https://discord.com/widget?id=1002922339287187456&theme=dark" className='max-w-[350px] h-[400px] lg:h-[500px]' allowransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                <iframe src="https://discord.com/widget?id=810030361189810229&amp;theme=dark" className='max-w-[350px]  h-[400px] lg:h-[500px]' allowTransparency frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                <iframe src="https://discord.com/widget?id=1002922339287187456&theme=dark" className='max-w-[350px] h-[400px] lg:h-[500px]' allowTransparency frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
               </div>
             </div>
           </div>
