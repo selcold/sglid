@@ -1,8 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import '../css/discord_message_ui.css'
+import PropTypes, { Validator } from 'prop-types';
+import '../css/discord_message_ui.css';
 
-export const DiscordMsg = ({ type, mode, mention, event, content, cmdName, userName, iconUrl, children }) => {
+type DiscordMsgProps = {
+    type?: 'messages' | 'message' | 'interaction' | 'content' | 'button';
+    mention?: boolean;
+    event?: string;
+    content?: string;
+    cmdName?: string;
+    userName?: string;
+    iconUrl?: string;
+    mode?: string;
+    children?: React.ReactNode;
+};
+
+export const DiscordMsg: React.FC<DiscordMsgProps> = ({ type, mode, mention, event, content, cmdName, userName, iconUrl, children }) => {
     var currentDate = new Date();
     var currentYear = currentDate.getFullYear();
     var currentMonth = ('0' + (currentDate.getMonth() + 1)).slice(-2);
@@ -129,7 +141,7 @@ export const DiscordMsg = ({ type, mode, mention, event, content, cmdName, userN
     };
 };
 DiscordMsg.propTypes = {
-    type: PropTypes.oneOf(['messages', 'message', 'interaction', 'content','button']).isRequired,
+    type: PropTypes.oneOf(['messages', 'message', 'interaction', 'content', 'button']) as Validator<DiscordMsgProps['type']>,
     mention: PropTypes.bool,
     event: PropTypes.string,
     content: PropTypes.string,
@@ -140,7 +152,16 @@ DiscordMsg.propTypes = {
     children: PropTypes.node,
 };
 
-export const DIscordMsgEmbed = ({ type, mode, children, className, content, color }) => {
+
+type DIscordMsgEmbedProps = {
+    type?: 'link' | 'div' | 'timestamp' | 'embed' | 'contents' | 'footer';
+    mode?: string;
+    className?: string;
+    content?: string;
+    color?: string;
+    children?: React.ReactNode;
+};
+export const DIscordMsgEmbed: React.FC<DIscordMsgEmbedProps> = ({ type, mode, content, className, color, children }) => {
     var currentDate = new Date();
     var currentYear = currentDate.getFullYear();
     var currentMonth = ('0' + (currentDate.getMonth() + 1)).slice(-2);
@@ -242,7 +263,7 @@ export const DIscordMsgEmbed = ({ type, mode, children, className, content, colo
     console.log(`error`)
 };
 DIscordMsgEmbed.propTypes = {
-    type: PropTypes.oneOf(['link','div','timestamp','embed','contents','footer']).isRequired,
+    type: PropTypes.oneOf(['link','div','timestamp','embed','contents','footer']) as Validator<DIscordMsgEmbedProps['type']>,
     mode: PropTypes.string,
     children: PropTypes.node,
     className: PropTypes.string,
