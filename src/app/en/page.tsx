@@ -56,7 +56,7 @@ export default function Home() {
 
   FadeUpTrigger();
   return (
-    <body className='m-0 p-0' style={{'--tw-bg-opacity':`1`,backgroundColor:`rgb(39 41 52/var(--tw-bg-opacity))`,'--tw-text-opacity':`1`,color:`rgb(145 149 171/var(--tw-text-opacity))`}}>
+    <body className='m-0 p-0' style={{backgroundColor:`rgb(39 41 52)`,color:`rgb(145 149 171)`}}>
       {isLangLoaded ? (
         <>
           {/* Header */}

@@ -203,7 +203,7 @@ export default function Home() {
     const [open, setOpen] = React.useState(false);
     const [value, setValue] = React.useState("");
     return (
-        <body style={{'--tw-bg-opacity':`1`,backgroundColor:`rgb(39 41 52/var(--tw-bg-opacity))`,'--tw-text-opacity':`1`,color:`rgb(145 149 171/var(--tw-text-opacity))`}}>
+        <body style={{backgroundColor:`rgb(39 41 52)`,color:`rgb(145 149 171)`}}>
                         {isLangLoaded ? (
                 <>
                     {/* Header */}
