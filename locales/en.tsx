@@ -13,6 +13,9 @@ const en_config = {
     "全て参照":"BROWSE ALL",
     "もっと詳しく知る":"Learn more",
     "閉じる":"close",
+    "表示":"Display",
+    "開く":"Open",
+    "パスワード":"Password",
     "コマンドを選択":"Select Commands",
     "コマンドが見つかりません。":"No commands found.",
     "コマンド_n_を使用する方法_1":"How to use the '",
@@ -24,6 +27,7 @@ const en_config = {
     "最高の Discord Bot を無料で導入する":"Get the best Discord bot for free.",
     "Scratchユーザーやプロジェクトを検索したり、Scratch アカウントと Discord アカウントをリンクしたりできます。 さらに、サーバー管理タスクを実行できます。":"You can search for Scratch users and projects, link your Scratch account with Discord, and perform server management tasks.",
     "不安定":"Unstable",
+    "サイトは現在限定公開です。表示するにはパスワード認証を行う必要があります。":"The site is currently privately hosted. To view it, you need to undergo password authentication.",
 }
 
 export default en_config

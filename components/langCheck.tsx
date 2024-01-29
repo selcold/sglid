@@ -4,6 +4,13 @@ import React, { useState, useEffect } from 'react';
 const GetLocationLanguage = () => {
     const [language, setLanguage] = useState(() => {
         if (typeof window !== 'undefined') {
+            const storedLanguage_sub = localStorage.getItem('language');
+            if(storedLanguage_sub){
+                if( storedLanguage_sub === 'ja' || storedLanguage_sub === 'en' ){
+                }else{
+                    localStorage.setItem('language', 'en');
+                }
+            };
             const storedLanguage = localStorage.getItem('language');
             return storedLanguage || navigator.language || 'en';
         }
