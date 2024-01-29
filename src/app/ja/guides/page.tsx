@@ -1156,12 +1156,12 @@ export default function Home() {
                     ) : (
                         <div className='fixed flex flex-col justify-center items-center w-full h-full'>
                             <div className='flex flex-col justify-center items-center p-4 mb-10 gap-2'>
-                                <h1 className='font-bold text-4xl'>ビル経営ゲーム</h1>
-                                <p className='p-5'>サイトは現在限定公開です。表示するにはパスワード認証を行う必要があります。</p>
+                                <h1 className='font-bold text-4xl'>{locales.Sglid}</h1>
+                                <p className='p-5'>{locales['サイトは現在限定公開です。表示するにはパスワード認証を行う必要があります。']}</p>
                             </div>
                             <div className='gap-4 flex flex-col justify-center items-center'>
                                 <input type='text' placeholder='パスワード' className='flex min-h-[20px] min-w-[200px] lg:w-[400px] rounded-md border border-zinc-700 border-input bg-zinc-900 px-3 py-2 mt-[10px] text-sm ring-offset-background focus-visible:outline-none' onChange={(e) => setViewLocked_password(e.target.value)}/>
-                                <button className='button_blue_1' onClick={() => updatePassword(ViewLocked_password)}>表示</button>
+                                <button className='button_blue_1' onClick={() => updatePassword(ViewLocked_password)}>{locales.開く}</button>
                             </div>
                         </div>
                     )}
