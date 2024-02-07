@@ -12,7 +12,7 @@ const GetLocationLanguage = () => {
                 }
             };
             const storedLanguage = localStorage.getItem('language');
-            return storedLanguage || navigator.language || 'en';
+            return storedLanguage || storedLanguage || 'en';
         }
         return 'en';
     });

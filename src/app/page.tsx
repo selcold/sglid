@@ -22,45 +22,45 @@ import ja_config from '../../locales/ja';
 import { ViewLocked_check } from '../../components/siteView/site_view';
 
 export default function Home() {
-  // ページロード
-  const [isLangLoaded, setPageLoaded] = useState(false);
-  useEffect(() => {
-    const fetchLanguage = async () => {
-        try {
-          const storedLanguage_sub = localStorage.getItem('language');
-          if(storedLanguage_sub){
-              if( storedLanguage_sub === 'ja' || storedLanguage_sub === 'en' ){
-              }else{
-                  localStorage.setItem('language', 'en');
-              }
-          };
-          const storedLanguage = localStorage.getItem('language');
-          const initialLanguage = storedLanguage || navigator.language || 'en';
+    // ページロード
+    const [isLangLoaded, setPageLoaded] = useState(false);
+    useEffect(() => {
+      const fetchLanguage = async () => {
+          try {
+            const storedLanguage_sub = localStorage.getItem('language');
+            if(storedLanguage_sub){
+                if( storedLanguage_sub === 'ja' || storedLanguage_sub === 'en' ){
+                }else{
+                    localStorage.setItem('language', 'en');
+                }
+            };
+            const storedLanguage = localStorage.getItem('language');
+            const initialLanguage = storedLanguage || 'en';
 
-          const path = window.location.pathname;
-          const first3Chars = path.slice(0, 3);
-          const modifiedPath = first3Chars.replace(/\//g, '');
-          const match = modifiedPath.match(/^([a-z]{2})$/);
-          const languageCode = match ? match[1] : "en";
-          const winPath = window.location.pathname;
-          const newPath = winPath.slice(3);
-          if (initialLanguage !== languageCode || newPath.length === 0) {
-              window.location.href = `/${initialLanguage}/${newPath}`;
+            const path = window.location.pathname;
+            const first3Chars = path.slice(0, 3);
+            const modifiedPath = first3Chars.replace(/\//g, '');
+            const match = modifiedPath.match(/^([a-z]{2})$/);
+            const languageCode = match ? match[1] : "en";
+            const winPath = window.location.pathname;
+            const newPath = winPath.slice(3);
+            if (initialLanguage !== languageCode || newPath.length === 0) {
+                window.location.href = `/${initialLanguage}/${newPath}`;
+            }
+            setPageLoaded(true);
+          } catch (error) {
+              console.error("Error fetching language:", error);
           }
-          setPageLoaded(true);
-        } catch (error) {
-            console.error("Error fetching language:", error);
-        }
-    };
+      };
 
-    // 言語情報をまだ取得していない場合にのみ非同期で取得する
-    if (!isLangLoaded) {
-        fetchLanguage();
-    }
-  }, [isLangLoaded]);
-  const location_language = GetLocationLanguage();
-  const locales = location_language === 'en' ? en_config : ja_config;
-  const links = location_language === 'en' ? links_en : links_ja;
+      // 言語情報をまだ取得していない場合にのみ非同期で取得する
+      if (!isLangLoaded) {
+          fetchLanguage();
+      }
+    }, [isLangLoaded]);
+    const location_language = GetLocationLanguage();
+    const locales = location_language === 'en' ? en_config : ja_config;
+    const links = location_language === 'en' ? links_en : links_ja;
 
   // 表示認証制度機能
   var isSiteViewLoad;
